@@ -1,2 +1,227 @@
+:root {
+    --bg-color: #FAF8F5;
+    --text-primary: #32241B;
+    --accent-color: #9B4B58;
+    --btn-bg: #32241B;
+    --btn-text: #FFFFFF;
+    --btn-hover: #36261D;
+    --heading-font: 'Cormorant Garamond', serif;
+    --body-font: 'Inter', sans-serif;
+    --btn-shadow: rgba(50, 36, 27, 0.25) 0px 30px 80px -20px;
+}
 
- 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--body-font);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://sc01.alicdn.com/kf/A2b374a1751474b8b81f45cba2d329472s.jpeg') no-repeat center center/cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.1) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: var(--heading-font);
+    font-size: 8rem;
+    font-weight: 300;
+    color: var(--text-primary);
+    letter-spacing: -2px;
+}
+
+.hero-title .accent {
+    color: var(--accent-color);
+    font-style: italic;
+    margin: 0 10px;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    text-align: center;
+    z-index: 2;
+    animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.scroll-indicator p {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.arrow-down {
+    width: 1px;
+    height: 60px;
+    background-color: var(--text-primary);
+    margin: 0 auto;
+    position: relative;
+}
+
+.arrow-down::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid var(--text-primary);
+    border-bottom: 1px solid var(--text-primary);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Details Section */
+.details {
+    padding: 120px 24px;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.heart-icon {
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.section-heading {
+    font-family: var(--heading-font);
+    font-size: 3.75rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    padding: 20px 48px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    box-shadow: var(--btn-shadow);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 60px;
+}
+
+.cta-button:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-2px);
+}
+
+.footer-text {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Scroll Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-title.fade-in-up {
+    transition-delay: 0.2s;
+}
+
+.heart-icon.fade-in-up {
+    transition-delay: 0.1s;
+}
+
+.section-heading.fade-in-up {
+    transition-delay: 0.2s;
+}
+
+.cta-button.fade-in-up {
+    transition-delay: 0.3s;
+}
+
+.footer-text.fade-in-up {
+    transition-delay: 0.4s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, 10px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .section-heading {
+        font-size: 2.75rem;
+    }
+    
+    .details {
+        padding: 80px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .section-heading {
+        font-size: 2.25rem;
+    }
+    
+    .cta-button {
+        padding: 18px 36px;
+        font-size: 0.75rem;
+    }
+}
