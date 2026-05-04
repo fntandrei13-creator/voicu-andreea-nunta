@@ -171,23 +171,23 @@ body {
 }
 
 .hero-title.fade-in-up {
-    transition-delay: 0.2s;
+    transition-delay: 0.5s;
 }
 
 .heart-icon.fade-in-up {
-    transition-delay: 0.1s;
+    transition-delay: 0.5s;
 }
 
 .section-heading.fade-in-up {
-    transition-delay: 0.2s;
+    transition-delay: 0.5s;
 }
 
 .cta-button.fade-in-up {
-    transition-delay: 0.3s;
+    transition-delay: 0.5s;
 }
 
 .footer-text.fade-in-up {
-    transition-delay: 0.4s;
+    transition-delay: 0.5s;
 }
 
 /* Animations */
