@@ -162,7 +162,7 @@ body {
 .fade-in-up {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.8s ease-out, transform 1.0s ease-out;
 }
 
 .fade-in-up.is-visible {
@@ -171,23 +171,23 @@ body {
 }
 
 .hero-title.fade-in-up {
-    transition-delay: 0.5s;
+    transition-delay: 2.0s;
 }
 
 .heart-icon.fade-in-up {
-    transition-delay: 0.5s;
+    transition-delay: 2.0s;
 }
 
 .section-heading.fade-in-up {
-    transition-delay: 0.5s;
+    transition-delay: 2.0s;
 }
 
 .cta-button.fade-in-up {
-    transition-delay: 0.5s;
+    transition-delay: 2.0s;
 }
 
 .footer-text.fade-in-up {
-    transition-delay: 0.5s;
+    transition-delay: 2.0s;
 }
 
 /* Animations */
