@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Redirect după 5 secunde
     setTimeout(() => {
         window.location.href = "https://storage.rcs-rds.ro/receive/fa70a871-0b54-4c53-b7c3-4aaca8804730";
-    }, 5000);
+    }, 3000);
 
     // Elemente
     const scrollBtn = document.getElementById("scroll-btn");
