@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = function () {
 
     // Redirect după 3 secunde
-    setTimeout(() => {
-        window.location.href = "https://storage.rcs-rds.ro/receive/fa70a871-0b54-4c53-b7c3-4aaca8804730";
+    setTimeout(function () {
+        window.location.replace("https://storage.rcs-rds.ro/receive/fa70a871-0b54-4c53-b7c3-4aaca8804730");
     }, 3000);
 
     // Elemente
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Scroll lin
     if (scrollBtn && detailsSection) {
-        scrollBtn.addEventListener("click", () => {
+        scrollBtn.addEventListener("click", function () {
             detailsSection.scrollIntoView({
                 behavior: "smooth"
             });
@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Observer pentru animații
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add("is-visible");
             }
@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".footer-text")
     ];
 
-    animatedElements.forEach((el) => {
+    animatedElements.forEach(function (el) {
         if (el) {
             el.classList.add("fade-in-up");
             observer.observe(el);
         }
     });
 
-});
+};
