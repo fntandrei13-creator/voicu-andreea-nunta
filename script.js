@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     // Redirect după 5 secunde
     setTimeout(() => {
-        window.location.replace("https://storage.rcs-rds.ro/receive/fa70a871-0b54-4c53-b7c3-4aaca8804730");
+        window.location.href = "https://storage.rcs-rds.ro/receive/fa70a871-0b54-4c53-b7c3-4aaca8804730";
     }, 5000);
 
     // Elemente
@@ -43,4 +44,5 @@ document.addEventListener("DOMContentLoaded", () => {
             observer.observe(el);
         }
     });
+
 });
