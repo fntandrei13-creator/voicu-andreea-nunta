@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Redirect după 5 secunde
+    // Redirect după 3 secunde
     setTimeout(() => {
         window.location.href = "https://storage.rcs-rds.ro/receive/fa70a871-0b54-4c53-b7c3-4aaca8804730";
     }, 3000);
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollBtn = document.getElementById("scroll-btn");
     const detailsSection = document.getElementById("details");
 
-    // Scroll
+    // Scroll lin
     if (scrollBtn && detailsSection) {
         scrollBtn.addEventListener("click", () => {
             detailsSection.scrollIntoView({
